@@ -14,6 +14,10 @@ class AwsSsm implements Source {
 		return @:futurize ssm.getParameters({
 			Names: names,
 			WithDecryption: true,
-		}, $cb1).next(function(data):Array<String> return [for(p in data.Parameters) p.Value]);
+		}, $cb1).next(function(data):Array<String> {
+			var params = data.Parameters;
+			params.sort(function(v1, v2) return Reflect.compare(names.indexOf(v1.Name), names.indexOf(v2.Name)));
+			return [for(p in params) p.Value];
+		});
 	}
 }
