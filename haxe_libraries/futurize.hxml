@@ -1,0 +1,4 @@
+-D futurize=1.0.1
+# @install: lix --silent download "gh://github.com/kevinresol/futurize#79d18164102466bc41497000e9bd4c7be1cbdf23" into futurize/1.0.1/github/79d18164102466bc41497000e9bd4c7be1cbdf23
+-lib tink_macro
+-cp ${HAXE_LIBCACHE}/futurize/1.0.1/github/79d18164102466bc41497000e9bd4c7be1cbdf23/src

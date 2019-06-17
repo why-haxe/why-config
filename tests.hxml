@@ -1,0 +1,6 @@
+-cp tests
+-main RunTests
+-dce full
+
+-lib futurize
+-lib extern-js-aws-sdk
